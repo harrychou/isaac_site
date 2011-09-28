@@ -18,6 +18,10 @@ Type your name: <input type="text" id="your_name" value="Awesome Guy" />
 <input type="button" id="button" value="Say It" onclick="SayHello()" />
 </p>
 <p>
+Write a math expression: <input type="text" id="math_exp" value="(3 * 5 - 2) + 29" />
+<input type="button" id="button_math" value="Get Answer" onclick="GetAnswer()" />
+</p>
+<p>
 
 <img src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/187098_100001726801314_3488535_n.jpg"/>
 </p>
@@ -26,8 +30,15 @@ Type your name: <input type="text" id="your_name" value="Awesome Guy" />
 
 function SayHello()
 {
-    name = window.document.getElementById("your_name").value;
+    var name = window.document.getElementById("your_name").value;
     alert('Hello, ' + name + '. It is ' + Date() + '. Hahaha! I live in tyranny! ');
+}
+
+function GetAnswer()
+{
+  var exp = window.document.getElementById("math_exp").value;
+	eval('value = ' + exp);
+	alert(exp + ' = ' + value);
 }
 
 </script>
